@@ -6,6 +6,10 @@ app.all('/signin', (req, res) => {
 })
 app.all("/signup", (req, res) => {
   console.log("Just got a request!");
-  res.send("Yo buddy!");
+  let response = {
+    success:1,
+    message:"you bro done it"
+  }
+  res.send(response);
 });
 app.listen(process.env.PORT || 3000)
